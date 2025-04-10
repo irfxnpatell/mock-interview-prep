@@ -13,7 +13,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const { type, role, level, techstack, amount, userId } = await request.json();
 
-  // ✅ Validate required fields
+  //  Validate required fields
   if (!type || !role || !level || !techstack || !amount || !userId) {
     return Response.json({
       success: false,
